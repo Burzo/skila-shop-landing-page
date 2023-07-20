@@ -112,11 +112,11 @@
       padding: 20rem 0;
 
       &.no-padding-bottom {
-        padding-bottom: 10rem;
+        padding-bottom: 5rem;
       }
 
       &.no-padding-top {
-        padding-top: 10rem;
+        padding-top: 0;
       }
 
       @media only screen and (max-width: 990px) {
@@ -234,15 +234,6 @@
 
     @media only screen and (max-width: 990px) {
       flex-direction: column !important;
-    }
-  }
-
-  @media only screen and (max-width: 990px) {
-    .section-wrapper:nth-child(1) {
-      padding-bottom: 0 !important;
-    }
-    .section-wrapper:nth-child(2) {
-      padding-top: 0 !important;
     }
   }
 }
