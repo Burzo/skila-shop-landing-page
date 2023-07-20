@@ -115,7 +115,6 @@
                     </select>
                   </div>
                   <div id='custom-captcha'></div>
-
                   <div class='form-element'>
                     <button
                       loading
@@ -220,5 +219,11 @@
       </div>
     </main>
     {{> partials/footer }}
+    <script
+      src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'
+      async
+      defer
+    >
+    </script>
   </body>
 </html>

@@ -163,7 +163,7 @@ window.addEventListener('load', () => {
           )
         })
         .then(() => {
-          grecaptcha?.reset()
+          window.grecaptcha?.reset()
           trialForm.reset()
           trialForm['submitButton'].toggleAttribute('loading')
           trialForm['submitButton'].innerHTML = `Register`
@@ -178,7 +178,7 @@ window.addEventListener('load', () => {
           }).showToast()
         })
         .catch(() => {
-          grecaptcha?.reset()
+          window.grecaptcha?.reset()
 
           trialForm['submitButton'].toggleAttribute('loading')
           trialForm['submitButton'].innerHTML = `Register`
@@ -231,7 +231,7 @@ window.addEventListener('load', () => {
           )
         })
         .then(() => {
-          grecaptcha?.reset()
+          window.grecaptcha?.reset()
           contactUsForm.reset()
           contactUsForm['submitButton'].toggleAttribute('loading')
           contactUsForm['submitButton'].innerHTML = `Submit`
@@ -246,7 +246,7 @@ window.addEventListener('load', () => {
           }).showToast()
         })
         .catch(() => {
-          grecaptcha?.reset()
+          window.grecaptcha?.reset()
 
           contactUsForm['submitButton'].toggleAttribute('loading')
           contactUsForm['submitButton'].innerHTML = `Submit`
