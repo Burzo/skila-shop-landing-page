@@ -48,51 +48,51 @@ module.exports = {
       filename: 'terms.html',
       title: 'Skila · Terms & Conditions',
     }),
-    new HtmlWebpackPlugin({
-      template: './src/about-us.handlebars',
-      filename: 'about-us.html',
-      title: 'Skila · About us',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/blogs/sustainable-post-purchase-experience.handlebars',
-      filename: 'sustainable-post-purchase-experience.html',
-      title:
-        'Skila · How To Create A Sustainable Post-Purchase Experience For Customers',
-    }),
-    new HtmlWebpackPlugin({
-      template:
-        './src/blogs/unlock-the-power-of-post-purchase-management.handlebars',
-      filename: 'unlock-the-power-of-post-purchase-management.html',
-      title:
-        'Skila · Unlock the Power of Post-Purchase Management for Small & Medium-Sized E-Commerce Businesses',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/blogs/boost-your-ecommerce-roi.handlebars',
-      filename: 'boost-your-ecommerce-roi.html',
-      title:
-        'Skila · Boost Your E-Commerce ROI with Effective Post-Purchase Management Strategies',
-    }),
-    new HtmlWebpackPlugin({
-      template:
-        './src/blogs/unlock-the-power-of-skilas-data-export-feature.handlebars',
-      filename: 'unlock-the-power-of-skilas-data-export-feature.html',
-      title: `Skila · Unlock the Power of Skila's Data Export Feature for Business Growth`,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/blogs/optimizing-post-purchase-management.handlebars',
-      filename: 'optimizing-post-purchase-management.html',
-      title: `Skila · Boosting Eco-Friendliness in E-Commerce: Optimizing Post-Purchase Management for Sustainability`,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/blogs/unlock-cost-savings-in-ecommerce.handlebars',
-      filename: 'unlock-cost-savings-in-ecommerce.html',
-      title: `Skila · Unlock Cost Savings in E-Commerce: Boost Your Business with Efficient Post-Purchase Management`,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/blogs/strengthen-customer-loyalty.handlebars',
-      filename: 'strengthen-customer-loyalty.html',
-      title: `Skila · Strengthen Customer Loyalty in E-Commerce with Effective Post-Purchase Management`,
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/about-us.handlebars',
+    //   filename: 'about-us.html',
+    //   title: 'Skila · About us',
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/blogs/sustainable-post-purchase-experience.handlebars',
+    //   filename: 'sustainable-post-purchase-experience.html',
+    //   title:
+    //     'Skila · How To Create A Sustainable Post-Purchase Experience For Customers',
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template:
+    //     './src/blogs/unlock-the-power-of-post-purchase-management.handlebars',
+    //   filename: 'unlock-the-power-of-post-purchase-management.html',
+    //   title:
+    //     'Skila · Unlock the Power of Post-Purchase Management for Small & Medium-Sized E-Commerce Businesses',
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/blogs/boost-your-ecommerce-roi.handlebars',
+    //   filename: 'boost-your-ecommerce-roi.html',
+    //   title:
+    //     'Skila · Boost Your E-Commerce ROI with Effective Post-Purchase Management Strategies',
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template:
+    //     './src/blogs/unlock-the-power-of-skilas-data-export-feature.handlebars',
+    //   filename: 'unlock-the-power-of-skilas-data-export-feature.html',
+    //   title: `Skila · Unlock the Power of Skila's Data Export Feature for Business Growth`,
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/blogs/optimizing-post-purchase-management.handlebars',
+    //   filename: 'optimizing-post-purchase-management.html',
+    //   title: `Skila · Boosting Eco-Friendliness in E-Commerce: Optimizing Post-Purchase Management for Sustainability`,
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/blogs/unlock-cost-savings-in-ecommerce.handlebars',
+    //   filename: 'unlock-cost-savings-in-ecommerce.html',
+    //   title: `Skila · Unlock Cost Savings in E-Commerce: Boost Your Business with Efficient Post-Purchase Management`,
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/blogs/strengthen-customer-loyalty.handlebars',
+    //   filename: 'strengthen-customer-loyalty.html',
+    //   title: `Skila · Strengthen Customer Loyalty in E-Commerce with Effective Post-Purchase Management`,
+    // }),
     new CopyWebpackPlugin({
       patterns: [{ from: 'assets', to: 'assets' }],
     }),

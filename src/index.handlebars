@@ -1,180 +1,214 @@
 <html lang='en'>
   {{> partials/head }}
   {{> partials/scripts }}
-  <body class='first-page'>
-    {{> partials/nav }}
+  <body class='about-us'>
+    {{> partials/nav}}
     <header>
       <div class='header-content'>
         <div class='text-half'>
-          <h1>Turning returns into strategic decisions</h1>
+          <h1>Turning Returns into Strategic Decisions</h1>
           <p class='subtitle'>
-           With Skila, leverage the power of return analytics to uncover hidden insights, 
-           optimize product performance, and drive impactful business strategies.
+            With Skila, leverage the power of return analytics to uncover hidden
+            insights, optimize product performance, and drive impactful business
+            strategies.
           </p>
-          <a href='/free-trial.html' class='button primary'>Start free trial</a>
+          <div class='image-half'>
+            <img src='/assets/images/table_people.png' />
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <div class='background margin-top-mobile'>
-        <div class='stock-image'>
-          <img src='assets/images/skila_woman_banner_low_1.png' />
-        </div>
-        <section id='easy-integration'>
-          <h2>Easy integration with other platforms</h2>
-          <div class='icon-container'>
-            <img
-              src='assets/images/shopify_logo_white.svg'
-              class='company-icon'
-            />
-            <img
-              src='assets/images/shopify_plus_logo_white.svg'
-              class='company-icon'
-            />
-            <img
-              src='assets/images/woocommerce_white.svg'
-              class='company-icon'
-            />
-            <img
-              src='assets/images/magento_logo_white.svg'
-              class='company-icon'
-            />
-            <img
-              src='assets/images/squarespace_logo_white.svg'
-              class='company-icon'
-            />
-            <img
-              src='assets/images/bigcommerce_logo_white.svg'
-              class='company-icon'
-            />
-          </div>
-        </section>
-        <section id='video'>
-          <div id='video-overlay'>
-            <div id='video-controls-play'>
-              <img class='unmute-icon' src='assets/images/play_icon.svg' />
+      <div class='background'>
+        <section id='why'>
+          <div class='section-wrapper no-padding-bottom'>
+            <div class='section-padder text-center'>
+              <h2>Spare yourself the headache</h2>
+              <p>With Skila you can simplify the return process while
+                transforming it into a source of valuable insights. These
+                insights empower businesses to improve their product design and
+                functionality, and enhance customer satisfaction, ultimately
+                leading to a more successful and customer-centric business.</p>
             </div>
-            <div id='video-controls-pause'>&nbsp;</div>
-            <video id='promotional-video' muted autoplay preload='metadata'>
-              <source src='assets/videos/skila_video.mp4' type='video/mp4' />
-              Your browser does not support the video tag.
-            </video>
           </div>
-        </section>
-        <section id='carrier-partners'>
-          <h2>Our carrier partners</h2>
-          <div class='icon-container'>
-            <img src='assets/images/dhl_logo_white.svg' class='carrier-icon' />
-            <img
-              src='assets/images/us_postal_service_logo_white.svg'
-              class='carrier-icon'
-            />
-            <img src='assets/images/ups_logo_white.svg' class='carrier-icon' />
-            <img src='assets/images/gls_logo_white.svg' class='carrier-icon' />
-            <img
-              src='assets/images/fedex_logo_white.svg'
-              class='carrier-icon'
-            />
-            <img src='assets/images/dpd_logo_white.svg' class='carrier-icon' />
+          <div class='section-wrapper no-padding-top'>
+            <div class='form-content section-padder'>
+              <div>
+                <h1>Ready to get your free trial?</h1>
+                <p class='subtitle'>
+                  Create your free account without any hassle and use the Skila
+                  platform.
+                </p>
+              </div>
+              <div>
+                <form
+                  id='trial-form-id'
+                  class='trial-form'
+                  data-netlify-recaptcha='true'
+                  data-netlify='true'
+                >
+                  <h2>Sign up for a free trial</h2>
+                  <div class='form-element'>
+                    <div class='form-element first-name'>
+                      <input
+                        required
+                        name='firstName'
+                        placeholder='First name'
+                      />
+                    </div>
+                    <div class='form-element last-name'>
+                      <input required name='lastName' placeholder='Last name' />
+                    </div>
+                  </div>
+                  <div class='form-element'>
+                    <input
+                      type='email'
+                      required
+                      name='email'
+                      placeholder='Email address'
+                    />
+                  </div>
+                  <div class='form-element'>
+                    <input
+                      required
+                      name='password'
+                      minlength='8'
+                      type='password'
+                      placeholder='Create password'
+                    />
+                  </div>
+                  <div class='form-element'>
+                    <input
+                      required
+                      name='companyName'
+                      placeholder='Company name'
+                    />
+                  </div>
+                  <div class='form-element'>
+                    <input required name='region' placeholder='Region' />
+                  </div>
+                  <div class='form-element'>
+                    <input
+                      required
+                      name='shopifyStore'
+                      placeholder='Shopify store'
+                    />
+                  </div>
+                  <div class='form-element'>
+                    <select
+                      required
+                      name='product'
+                      id='productSelect'
+                      placeholder='Select product of interest'
+                    >
+                      <option value='' disabled selected>Select product of
+                        interest</option>
+                      <option value='ship'>Ship</option>
+                      <option value='track'>Track</option>
+                      <option value='return'>Return</option>
+                      <option value='allOfTheAbove'>All of the above</option>
+                    </select>
+                  </div>
+                  <div id='custom-captcha'></div>
+
+                  <div class='form-element'>
+                    <button
+                      loading
+                      class='button primary'
+                      type='submit'
+                      name='submitButton'
+                    >Register</button>
+                  </div>
+                  <div class='form-element'><span class='footer-text'>By
+                      submitting this form, you agree to Skila’s
+                      <a class='inline-link' href='/privacy.html'>Privacy Policy</a>,
+                      and you consent to receive personalized marketing
+                      communications.</span></div>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
       </div>
-      <section id='cards'>
-        <div class='cards-container'>
-          <div class='card'>
-            <div class='card-icon'>
-              <img src='assets/images/express-delivery-1.svg' />
+      <div class='background smaller-background margin-top'>
+        <section id='why-2'>
+          <div class='section-wrapper'>
+            <div class='stock-image'>
+              <img src='assets/images/skila_woman_banner_low_1.png' />
             </div>
-            <h3>Ship</h3>
-            <p>Tracking your devices from the start.</p>
-            <p>
-              Utilize Skila to efficiently monitor your devices, tracking their journey from the moment they are sent.
-            </p>
-            <a href='/how-it-works.html#ship' class='button primary'>Read more</a>
+            <div class='section-padder text-center'>
+              <h2>Track your devices from the begining of their journey</h2>
+              <p>Begin the journey with your devices right from the start.
+                Utilize Skila to efficiently track your devices, keeping a
+                vigilant eye on their journey from the moment they are
+                dispatched. Skila's advanced tracking capabilities provide
+                comprehensive visibility into your product's life cycle. By
+                tracking the life cycle, you can understand when and why returns
+                happen, enabling you to make strategic decisions about product
+                improvements. With Skila, turn your product life cycle tracking
+                into a strategic advantage.</p>
+            </div>
           </div>
-          <div class='card'>
-            <div class='card-icon'>
-              <img src='assets/images/tracking-1.svg' />
+        </section>
+      </div>
+      <section id='why-3'>
+        <div class='section-wrapper'>
+          <div class='section-padder text-center'>
+            <div class='card-container'>
+              <div class='card-icon'>
+                <img src='assets/images/express-delivery-1.svg' />
+              </div>
+              <div class='card-icon'>
+                <img src='assets/images/tracking-1.svg' />
+              </div>
+              <div class='card-icon'>
+                <img src='assets/images/return-box-1.svg' />
+              </div>
             </div>
-            <h3>Track</h3>
-            <p>From order delivery through return.</p>
-            <p>
-              Skila’s messaging is built to drive consumer engagement and
-              incremental revenue.
-            </p>
-            <a href='/how-it-works.html#track' class='button primary'>Read more</a>
-          </div>
-          <div class='card'>
-            <div class='card-icon'>
-              <img src='assets/images/return-box-1.svg' />
-            </div>
-            <h3>Returns</h3>
-            <p>Returns made easy.</p>
-            <p>
-              Learn from returns to improve product design, functionality, and customer satisfaction.
-            </p>
-            <a href='/how-it-works.html#returns' class='button primary'>Read
-              more</a>
+            <h2>Easy integration with all major carriers</h2>
+            <p>Discover the range of carriers compatible with Skila, your
+              reliable partner for efficient product delivery. We proudly
+              integrate with major carriers including GLS, FedEx, DPD, and DHL,
+              USPS, ensuring your goods reach your customers swiftly and
+              securely. Leveraging Skila's robust system, you can utilize these
+              carrier services, each offering a unique blend of benefits, to
+              cater to the diverse needs of your customer base. Explore the
+              unparalleled flexibility and power of Skila to optimize your
+              shipping process and enhance customer satisfaction.</p>
           </div>
         </div>
       </section>
       <div class='background'>
-        <section class='glide' id='testimonials'>
-          <div class='testimonials-container'>
-            <div class='glide__track' data-glide-el='track'>
-              <ul class='glide__slides'>
-                <li class='glide__slide'>
-                  <div class='testimony'>
-                    <div class='user-image'>
-                      <img src='assets/images/figure-luka-birsa-1.svg' />
-                    </div>
-                    <div class='text-box'>
-                      <q>Prior to Skila, returns were painful and expensive. We
-                        are thrilled to consolidate returns software and
-                        services with one trusted partner, and our customers
-                        appreciate the ease and consistency.</q>
-                      <p class='user-name'>Luka Birsa</p>
-                      <p class='user-role'>CTO at Visionect</p>
-                    </div>
-                  </div>
-                </li>
-                <li class='glide__slide'>
-                  <div class='testimony'>
-                    <div class='user-image'>
-                      <img src='assets/images/GregaF.jpg' />
-                    </div>
-                    <div class='text-box'>
-                      <q>Thanks to Skila, returns and shipping are no longer a
-                        headache. They provide a seamless solution that allows
-                        us to focus on providing the best products and customer
-                        experience possible.</q>
-                      <p class='user-name'>Gregor Fartek</p>
-                      <p class='user-role'>Head Of Support at Bird Buddy</p>
-                    </div>
-                  </div>
-                </li>
-                {{! <li class='glide__slide'>
-                  <div class='testimony'>
-                    <div class='user-image'>
-                      <img src='assets/images/figure-luka-birsa-1.svg' />
-                    </div>
-                    <div class='text-box'>
-                      <q>Prior to Skila, returns were painful and expensive. We
-                        are thrilled to consolidate returns software and
-                        services with one trusted partner, and our customers
-                        appreciate the ease and consistency.</q>
-                      <p class='user-name'>Luka Birsa</p>
-                      <p class='user-role'>CTO as Visionect</p>
-                    </div>
-                  </div>
-                </li> }}
-              </ul>
-            </div>
-            <div class='glide__bullets' data-glide-el='controls[nav]'>
-              <button class='glide__bullet' data-glide-dir='=0'></button>
-              <button class='glide__bullet' data-glide-dir='=1'></button>
-              {{! <button class='glide__bullet' data-glide-dir='=1'></button>
-              <button class='glide__bullet' data-glide-dir='=2'></button> }}
+        <section id='why-4'>
+          <div class='section-wrapper'>
+            <div class='section-padder text-center'>
+              <h2>Our carrier partners</h2>
+              <div class='icon-container'>
+                <img
+                  src='assets/images/dhl_logo_white.svg'
+                  class='carrier-icon'
+                />
+                <img
+                  src='assets/images/us_postal_service_logo_white.svg'
+                  class='carrier-icon'
+                />
+                <img
+                  src='assets/images/ups_logo_white.svg'
+                  class='carrier-icon'
+                />
+                <img
+                  src='assets/images/gls_logo_white.svg'
+                  class='carrier-icon'
+                />
+                <img
+                  src='assets/images/fedex_logo_white.svg'
+                  class='carrier-icon'
+                />
+                <img
+                  src='assets/images/dpd_logo_white.svg'
+                  class='carrier-icon'
+                />
+              </div>
             </div>
           </div>
         </section>
