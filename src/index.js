@@ -163,7 +163,7 @@ window.addEventListener('load', () => {
           )
         })
         .then(() => {
-          grecaptcha.reset()
+          grecaptcha?.reset()
           trialForm.reset()
           trialForm['submitButton'].toggleAttribute('loading')
           trialForm['submitButton'].innerHTML = `Register`
@@ -178,7 +178,7 @@ window.addEventListener('load', () => {
           }).showToast()
         })
         .catch(() => {
-          grecaptcha.reset()
+          grecaptcha?.reset()
 
           trialForm['submitButton'].toggleAttribute('loading')
           trialForm['submitButton'].innerHTML = `Register`
@@ -231,7 +231,7 @@ window.addEventListener('load', () => {
           )
         })
         .then(() => {
-          grecaptcha.reset()
+          grecaptcha?.reset()
           contactUsForm.reset()
           contactUsForm['submitButton'].toggleAttribute('loading')
           contactUsForm['submitButton'].innerHTML = `Submit`
@@ -246,7 +246,7 @@ window.addEventListener('load', () => {
           }).showToast()
         })
         .catch(() => {
-          grecaptcha.reset()
+          grecaptcha?.reset()
 
           contactUsForm['submitButton'].toggleAttribute('loading')
           contactUsForm['submitButton'].innerHTML = `Submit`
@@ -274,7 +274,7 @@ window.addEventListener('load', () => {
     if (!reCAPTCHA) return
 
     let width = reCAPTCHA.parentElement.offsetWidth
-    console.log(width)
+
     if (width < 400) {
       scale = width / 400
     } else {
