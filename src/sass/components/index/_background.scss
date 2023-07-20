@@ -1,0 +1,66 @@
+@import './../../variables';
+
+// https://9elements.com/blog/pure-css-diagonal-layouts/
+
+.first-page .background {
+  position: relative;
+
+  @include respond(phone) {
+    &.margin-top-mobile {
+      margin-top: 49rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: $background-gradient;
+    transform: skewY(-$skew-page);
+
+    @include respond(phone) {
+      background-image: $background-gradient-mobile;
+    }
+
+    z-index: -100;
+  }
+
+  .stock-image {
+    position: absolute;
+    transform: translate(50%, -100%);
+    right: 27%;
+    top: 0;
+    z-index: -1000;
+
+    img {
+      max-width: 42rem;
+      height: auto;
+    }
+
+    @media only screen and (max-width: 920px) {
+      transform: translate(50%, -98%);
+    }
+
+    @include respond(phone) {
+      right: 50%;
+      top: $skew-padding + 1vw;
+    }
+  }
+}
+
+section:not(#video),
+footer,
+#banner {
+  padding: $skew-padding 0;
+
+  &#carrier-partners {
+    padding-top: 0;
+  }
+}
+
+footer {
+  padding-bottom: 3rem;
+}

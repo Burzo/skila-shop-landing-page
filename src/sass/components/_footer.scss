@@ -1,0 +1,58 @@
+@import './../variables';
+
+footer {
+  .footer-content {
+    padding: 8rem 0 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    width: $header-width;
+    max-width: 100%;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-links {
+    margin-left: auto;
+
+    @include respond(phone) {
+      padding-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+
+      & span {
+        display: none;
+      }
+    }
+
+    & > a, & > div {
+      display: inline;
+      font-weight: 100;
+      padding: 0 2rem;
+      user-select: none;
+      font-size: 1.6rem;
+      color: $font-color;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      @include respond(phone) {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}

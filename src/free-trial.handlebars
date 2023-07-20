@@ -1,0 +1,92 @@
+<html lang='en'>
+  {{> partials/head }}
+  {{> partials/scripts }}
+  <script type='text/javascript'>
+    let captcha; var onloadCallback = function() { captcha =
+    grecaptcha.render('custom-captcha', { 'sitekey' :
+    '6LftEbEiAAAAAFB4AVeJR-9yBpZWdVndky5yXzsA' }); };
+  </script>
+  <body class='trial'>
+    {{> partials/nav}}
+    <div class='padder'>
+      <div class='trial-wrapper'>
+        <header>
+          <h1>Ready to get your free trial?</h1>
+          <p>Create your free account without any hassle and use the Skila
+            platform.</p>
+        </header>
+        <main>
+          <form
+            id='trial-form-id'
+            class='trial-form'
+            data-netlify-recaptcha='true'
+            data-netlify='true'
+          >
+            <h2>Sign up for a free trial</h2>
+            <div class='form-element'>
+              <div class='form-element first-name'>
+                <input required name='firstName' placeholder='First name' />
+              </div>
+              <div class='form-element last-name'>
+                <input required name='lastName' placeholder='Last name' />
+              </div>
+            </div>
+            <div class='form-element'>
+              <input
+                type='email'
+                required
+                name='email'
+                placeholder='Email address'
+              />
+            </div>
+            <div class='form-element'>
+              <input
+                required
+                name='password'
+                minlength='8'
+                type='password'
+                placeholder='Create password'
+              />
+            </div>
+            <div class='form-element'>
+              <select
+                required
+                name='product'
+                id='productSelect'
+                placeholder='Select product of interest'
+              >
+                <option value='' disabled selected>Select product of interest</option>
+                <option value='ship'>Ship</option>
+                <option value='track'>Track</option>
+                <option value='return'>Return</option>
+                <option value='allOfTheAbove'>All of the above</option>
+              </select>
+            </div>
+            <div id='custom-captcha'></div>
+            
+            <div class='form-element'>
+              <button
+                loading
+                class='button primary'
+                type='submit'
+                name='submitButton'
+              >Register</button>
+            </div>
+            <div class='form-element'><span class='footer-text'>By submitting
+                this form, you agree to Skila’s
+                <a class='inline-link' href='/privacy.html'>Privacy Policy</a>,
+                and you consent to receive personalized marketing
+                communications.</span></div>
+          </form>
+        </main>
+      </div>
+      {{> partials/footer }}
+    </div>
+    <script
+      src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'
+      async
+      defer
+    >
+    </script>
+  </body>
+</html>

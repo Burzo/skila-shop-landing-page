@@ -1,0 +1,148 @@
+@import './../../variables';
+
+.first-page section {
+  position: relative;
+
+  &#easy-integration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .company-icon {
+        width: auto;
+        height: 4.8rem;
+
+        margin: 2.5rem;
+      }
+    }
+  }
+
+  &#video {
+  }
+
+  &#carrier-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      padding-bottom: 8rem;
+
+      .carrier-icon {
+        width: auto;
+        height: 4.8rem;
+
+        margin: 2.5rem;
+      }
+    }
+  }
+
+  &#cards {
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      padding: 8rem 0;
+    }
+  }
+
+  &#testimonials {
+    & .testimonials-container {
+      position: relative;
+      padding: 10rem 0;
+      max-width: $header-width;
+      margin: auto;
+
+      .glide__bullet {
+        width: 2.4rem;
+        height: 2.4rem;
+
+        &--active {
+          background-color: #fff;
+        }
+      }
+    }
+
+    .testimony {
+      color: $white;
+      font-size: $font-size;
+
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+
+      padding: 0 10rem;
+
+      @include respond(tab-land) {
+        padding: 0;
+      }
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .user-image {
+        img {
+          width: 21.5rem;
+          height: 21.5rem;
+          border-radius: 100%;
+        }
+      }
+
+      .text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+
+        padding: 0 6rem;
+        padding-right: 0;
+
+        @include respond(tab-port) {
+          padding: 0;
+          padding-top: 4rem;
+        }
+
+        & > q {
+          font-style: italic;
+          font-weight: 100;
+          font-size: $font-size;
+          margin-bottom: 3rem;
+        }
+
+        .user {
+          &-name {
+            font-weight: 900;
+            color: $white;
+            font-size: $font-size;
+          }
+          &-role {
+            font-weight: 100;
+            color: $white;
+            font-size: $font-size;
+          }
+        }
+      }
+    }
+  }
+}

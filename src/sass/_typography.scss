@@ -1,0 +1,94 @@
+@import './variables';
+
+*:not(i) {
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+input,
+select,
+textarea {
+  position: relative;
+  width: 100%;
+  border-radius: 0.8rem;
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  height: 5.5rem;
+
+  padding: 0 1.5rem;
+}
+
+textarea {
+  padding: 1.5rem 1.5rem;
+  min-height: 12rem;
+}
+
+a {
+  display: inline-block;
+
+  &.inline-link {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: underline;
+    display: inline;
+  }
+}
+
+h1 {
+  font-size: 4.8rem;
+  color: $title-color;
+  margin: 4rem 0;
+}
+
+p {
+  font-size: $font-size;
+  color: $font-color;
+  font-weight: 300;
+  margin: 0;
+  line-height: 3.5rem;
+
+  &.subtitle {
+    margin: 4rem 0;
+  }
+}
+
+h2 {
+  color: $title-color;
+  font-size: 4.8rem;
+  margin: 8rem 0;
+}
+
+.background:not(.smaller-background) {
+  h2 {
+    color: $title-color-inverse;
+  }
+}
+
+h3 {
+  color: $title-color;
+  font-size: 3.6rem;
+  font-weight: 900;
+
+  margin: 0;
+  margin-top: 2rem;
+}
+
+h4 {
+  color: $title-color;
+  font-size: 3.2rem;
+  font-weight: 900;
+
+  margin: 2.5rem 0;
+}
+
+figcaption {
+  color: $font-color;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-top: 0.3rem;
+}

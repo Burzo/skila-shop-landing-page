@@ -1,0 +1,26 @@
+@import './../../variables';
+
+// https://9elements.com/blog/pure-css-diagonal-layouts/
+
+.how-it-works .background {
+  position: relative;
+  background-image: $background-gradient;
+  transform: skewY(-$skew-page);
+
+  @include respond(phone) {
+    background-image: $background-gradient-mobile;
+  }
+
+  .section-image .image,
+  .section-image img {
+    transform: skewY($skew-page) scale(1.1);
+  }
+
+  .section-wrapper {
+    transform: skewY($skew-page);
+  }
+}
+
+footer {
+  padding-bottom: 3rem;
+}

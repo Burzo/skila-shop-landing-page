@@ -1,0 +1,153 @@
+@import 'normalize.css/normalize.css';
+@import '@glidejs/glide/dist/css/glide.core.min.css';
+@import '@glidejs/glide/dist/css/glide.theme.min.css';
+@import 'toastify-js/src/toastify.css';
+
+@import './variables';
+@import './cookie-consent';
+@import './hamburger-settings';
+@import 'hamburgers/_sass/hamburgers/hamburgers.scss';
+
+@import './mixins';
+@import './typography';
+
+@import './components/button';
+@import './components/footer';
+@import './components/nav';
+@import './components/video';
+@import './components/card';
+@import './components/checkmark';
+
+@import './components/index/header';
+@import './components/index/sections';
+@import './components/index/background';
+
+@import './components/how-it-works/header';
+@import './components/how-it-works/sections';
+@import './components/how-it-works/background';
+
+@import './components/more-info/header';
+@import './components/more-info/sections';
+@import './components/more-info/background';
+
+@import './components/about-us/header';
+@import './components/about-us/sections';
+@import './components/about-us/background';
+
+@import './components/trial/trial-main';
+
+@import './components/contact-us/contact-us-main';
+
+@import './components/terms/terms';
+
+@import './components/privacy/privacy';
+
+@import './components/blogs/blog';
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(phone) {
+    font-size: 43.75%;
+  }
+
+  // @include respond(big-desktop) {
+  //   // width > 1800
+  //   font-size: 75%; // 1rem = 12px
+  // }
+}
+
+.toaster {
+  background-image: $background-gradient;
+  border-radius: 16px;
+  padding: 2rem;
+
+  &.error {
+    background-color: red;
+    background-image: unset;
+  }
+
+  @include respond(phone) {
+    background-image: $background-gradient-mobile;
+  }
+}
+
+#custom-captcha {
+  margin-bottom: 1.9rem;
+  transform-origin: 0 0;
+}
+
+// body {
+//   width: $content-width;
+// }
+
+nav,
+header,
+section:not(#video),
+footer {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.logo {
+  user-select: none;
+  width: 13.4rem;
+  height: 4.804rem;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  src: url('assets/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/Ubuntu-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 200;
+  src: url('assets/fonts/Ubuntu-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 200;
+  src: url('assets/fonts/Ubuntu-LightItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  src: url('assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  src: url('assets/fonts/Ubuntu-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}

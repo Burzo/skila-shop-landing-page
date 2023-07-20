@@ -1,0 +1,117 @@
+@import './../../variables';
+
+.more-info header {
+  position: relative;
+  padding: 5rem 3rem;
+  padding-right: 0;
+  padding-bottom: 0;
+
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 1954px) {
+    padding-top: 10rem;
+  }
+
+  @media only screen and (max-width: 1422px) {
+    padding-top: 7rem;
+  }
+
+  @include respond(tab-port) {
+    padding-top: 6rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 0rem;
+
+    h1 {
+      margin-top: 3rem;
+    }
+  }
+
+  .header-content {
+    margin: auto;
+
+    width: calc($header-width + 3rem);
+    max-width: 100%;
+
+    display: flex;
+  }
+
+  .text-half {
+    max-width: 44rem;
+
+    padding-right: 10rem;
+
+    position: relative;
+
+    @include respond(phone) {
+      max-width: 100%;
+      width: 100%;
+
+      & a {
+        display: block;
+        margin: auto;
+        width: 70%;
+      }
+    }
+
+    a {
+      margin-top: 2rem;
+
+      @include respond(phone) {
+        display: block;
+        margin: auto;
+        width: 70%;
+      }
+
+      @media only screen and (max-width: 380px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .image-half {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translate(100%, 50%);
+
+    z-index: -1000;
+
+    img {
+      //   height: 140%;
+      height: calc(100vw / 3);
+      max-height: 160%;
+
+      width: auto;
+
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      transform: translate(0, 50%);
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    padding-right: 3rem;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-half {
+      padding-right: 0;
+      width: 100%;
+      max-width: 60rem;
+    }
+
+    .image-half {
+      display: none;
+    }
+  }
+}

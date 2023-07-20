@@ -1,0 +1,170 @@
+@import './../../variables';
+
+.more-info section {
+  position: relative;
+
+  margin: auto;
+
+  max-width: 100%;
+
+  p {
+    color: $white;
+  }
+
+  h3 {
+    margin: inherit;
+    color: $white;
+  }
+
+  &#simplify {
+    .section-image .image {
+      background: url(/assets/images/skilla_why_skilla_1.png) no-repeat center
+        center scroll;
+      background-size: cover;
+    }
+  }
+
+  &#monitor {
+    .section-image .image {
+      background: url(/assets/images/skilla_who_is_behind_skilla_1.png)
+        no-repeat center center scroll;
+      background-size: cover;
+    }
+  }
+
+  &#freeing {
+    .section-image .image {
+      background: url(/assets/images/skilla_returns_2.png) no-repeat center
+        center scroll;
+      background-size: cover;
+    }
+  }
+
+  &#simplify,
+  &#monitor,
+  &#freeing {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+
+      padding: 10rem 0;
+
+      @media only screen and (max-width: 990px) {
+        padding: 7rem 0;
+      }
+
+      @media only screen and (max-width: 900px) {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 590px) {
+        padding: 5rem 0;
+      }
+
+      .section-padder {
+        width: 80rem;
+        padding: 0 3rem;
+
+        & > * {
+          margin: 3.3rem 0;
+        }
+
+        @media only screen and (max-width: 2100px) {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 900px) {
+          width: auto;
+          padding: 0 3rem;
+        }
+      }
+    }
+  }
+
+  &#spare {
+    padding-top: 20rem;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: $header-width;
+
+    @media only screen and (max-width: 690px) {
+      padding-top: 15rem;
+    }
+
+    @include respond(phone) {
+      padding-top: 10rem;
+    }
+
+    p {
+      color: $font-color;
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 380px) {
+      p,
+      h3 {
+        text-align: left;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    & > * {
+      margin: 2rem 0;
+    }
+    button {
+      margin-top: 3rem;
+    }
+  }
+
+  .section-image {
+    overflow: hidden;
+    flex: 1;
+
+    .image {
+      padding: 20rem 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 990px) {
+    flex-direction: column !important;
+    .section-image {
+      .image {
+        display: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

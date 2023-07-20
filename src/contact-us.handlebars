@@ -1,0 +1,76 @@
+<html lang='en'>
+  {{> partials/head }}
+  {{> partials/scripts }}
+  <script type='text/javascript'>
+    let captcha; var onloadCallback = function() { captcha =
+    grecaptcha.render('custom-captcha', { 'sitekey' :
+    '6LftEbEiAAAAAFB4AVeJR-9yBpZWdVndky5yXzsA' }); };
+  </script>
+  <body class='contact-us'>
+    {{> partials/nav}}
+    <div class='padder'>
+      <div class='contact-us-wrapper'>
+        <header>
+          <h1>Have any additional questions?</h1>
+          <p>Please don’t hesitate to contact us anytime. We’re here to help.</p>
+        </header>
+        <main>
+          <form
+            id='contact-us-form-id'
+            class='contact-us-form'
+            data-netlify-recaptcha='true'
+            data-netlify='true'
+          >
+            <h2>Submission form</h2>
+            <div class='form-element'>
+              <div class='form-element first-name'>
+                <input required name='firstName' placeholder='First name' />
+              </div>
+              <div class='form-element last-name'>
+                <input required name='lastName' placeholder='Last name' />
+              </div>
+            </div>
+            <div class='form-element'>
+              <input
+                type='email'
+                required
+                name='email'
+                placeholder='Email address'
+              />
+            </div>
+            <div class='form-element'>
+              <textarea
+                required
+                rows='5'
+                name='message'
+                id='message'
+                placeholder='Your message'
+              ></textarea>
+            </div>
+            <div id='custom-captcha'></div>
+            <div class='form-element'>
+              <button
+                loading
+                class='button primary'
+                type='submit'
+                name='submitButton'
+              >Submit</button>
+            </div>
+            <div class='form-element'><span class='footer-text'>By submitting
+                this form, you agree to Skila’s
+                <a class='inline-link' href='/privacy.html'>Privacy Policy</a>,
+                and you consent to receive personalized marketing
+                communications.</span></div>
+          </form>
+        </main>
+      </div>
+      {{> partials/footer }}
+    </div>
+    <script
+      src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'
+      async
+      defer
+    >
+    </script>
+  </body>
+</html>

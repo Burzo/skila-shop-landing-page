@@ -1,0 +1,59 @@
+#video-overlay {
+  position: relative;
+
+  #video-controls {
+    &-play {
+      cursor: pointer;
+    }
+
+    &-pause {
+      z-index: -100;
+    }
+
+    &-play,
+    &-pause {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      background-color: transparent;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 6.4rem;
+        height: auto;
+      }
+    }
+  }
+
+  #promotional-video {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    @media only screen and (min-width: 1400px) {
+      border-radius: 2.4rem;
+      max-width: 76%;
+    }
+
+    @media only screen and (min-width: 1700px) {
+      border-radius: 2.4rem;
+      max-width: 85%;
+    }
+
+    @media only screen and (min-width: 1850px) {
+      border-radius: 2.4rem;
+      max-width: 80%;
+    }
+
+    @media only screen and (min-width: 2000px) {
+      border-radius: 2.4rem;
+      max-width: 70%;
+    }
+  }
+}

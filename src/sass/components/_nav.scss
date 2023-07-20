@@ -1,0 +1,109 @@
+@import './../variables';
+
+nav {
+  height: 12rem;
+
+  position: sticky;
+  top: 0;
+  background-color: $background-color;
+  z-index: 10;
+
+  transition: 0.1s box-shadow;
+
+  &.shadow {
+    box-shadow: 0 0 4.8rem rgba(0, 0, 0, 0.1);
+
+    @include respond(phone) {
+      box-shadow: none;
+    }
+  }
+
+  &:not(&[stuck]) {
+    box-shadow: none;
+  }
+
+  padding: 0 3rem;
+
+  .nav-content {
+    height: 100%;
+
+    margin: auto;
+    width: $header-width;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      @include respond(phone) {
+        display: none;
+        appearance: hidden;
+      }
+    }
+
+    &-mobile {
+      display: none;
+      appearance: hidden;
+
+      &-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        overflow: hidden;
+        transition: 0.2s height;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $background-color;
+
+        & .navlink {
+          height: 0;
+          transition: 0.2s height;
+
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      @include respond(phone) {
+        display: block;
+
+        & > .is-active ~ .nav-content-mobile-container {
+          height: auto;
+          border-bottom: 1px solid $font-color;
+
+          & .navlink {
+            height: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .main-logo {
+    margin-right: auto;
+    user-select: none;
+  }
+
+  .navlink {
+    font-weight: 200;
+    padding: 0 2rem;
+    user-select: none;
+    font-size: 2rem;
+    color: $link-color;
+  }
+}

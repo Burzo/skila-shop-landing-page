@@ -1,0 +1,149 @@
+@import './../variables';
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.button {
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 1.2rem;
+    padding: 1.6rem 4.8rem;
+
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: $dark-blue;
+    color: $white;
+
+    border-width: 0;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.8rem;
+    padding: 1.6rem 4.8rem;
+
+    transition: 0.1s transform;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+    }
+
+    &:focus {
+      // outline: 3px solid $dark-blue;
+      // outline-offset: -3px;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &.primary {
+      background-color: $pink;
+    }
+
+    &.outlined {
+      padding: 1.3rem 4.5rem;
+      color: $pink;
+      border: 0.3rem solid $pink;
+      background-color: $white;
+    }
+  }
+}
+
+button.button {
+  min-height: 6rem;
+  position: relative;
+  border-radius: 1.2rem;
+  padding: 1.6rem 4.8rem;
+
+  cursor: pointer;
+
+  background-color: $dark-blue;
+  color: $white;
+
+  border-width: 0;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.8rem;
+  padding: 1.6rem 4.8rem;
+
+  transition: 0.1s transform;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+
+  &:focus {
+    // outline: 3px solid $dark-blue;
+    // outline-offset: -3px;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &.primary {
+    background-color: $pink;
+  }
+
+  &[loading] {
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+  }
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2rem 0 0 -2rem;
+  width: 4rem;
+  height: 4rem;
+
+  & .path {
+    stroke: $white;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

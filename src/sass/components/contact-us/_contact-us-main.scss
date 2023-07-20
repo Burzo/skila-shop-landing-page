@@ -1,0 +1,116 @@
+@import './../../variables';
+
+.contact-us {
+  .padder {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - $header-height);
+  }
+
+  .contact-us-wrapper {
+    margin: auto;
+    max-width: calc($header-width + 6rem);
+
+    padding: 6rem 0;
+    padding-bottom: 0;
+
+    @media only screen and (max-width: 950px) {
+      margin: unset;
+      margin-bottom: auto;
+      padding-top: 3rem;
+      flex-direction: column;
+    }
+
+    display: flex;
+    align-items: stretch;
+
+    header {
+      padding: 0;
+      padding-left: 3rem;
+      padding-right: 10rem;
+      padding-bottom: 3rem;
+      max-width: 44rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        margin-top: 0;
+      }
+
+      @media only screen and (max-width: 950px) {
+        max-width: 100%;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+
+        align-items: flex-start;
+      }
+    }
+
+    main {
+      padding-right: 3rem;
+
+      @media only screen and (max-width: 950px) {
+        padding-left: 3rem;
+        padding-top: 3rem;
+      }
+
+      .contact-us-form {
+        h2 {
+          color: $white;
+          padding: 0;
+          margin: 0;
+          margin-bottom: 3.5rem;
+          font-size: 3.3rem;
+        }
+
+        border-radius: 1.6rem;
+        background-image: $background-gradient;
+        padding: 3.5rem;
+
+        .form-element {
+          margin-bottom: 1.9rem;
+          width: 100%;
+
+          display: flex;
+
+          @media only screen and (max-width: 980px) {
+            flex-direction: column;
+          }
+
+          & .form-element {
+            margin-bottom: 0;
+            width: 50%;
+
+            @media only screen and (max-width: 980px) {
+              width: 100%;
+            }
+
+            &:not(:last-child) {
+              margin-right: 1.9rem;
+
+              @media only screen and (max-width: 980px) {
+                margin-right: 0;
+                margin-bottom: 1.9rem;
+              }
+            }
+          }
+        }
+
+        button {
+          min-width: 28.8rem;
+          margin-top: 1rem;
+        }
+      }
+
+      .footer-text {
+        color: $white;
+        font-weight: 100;
+        font-size: 1.2rem;
+        margin-top: 3rem;
+      }
+    }
+  }
+}

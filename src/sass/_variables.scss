@@ -1,0 +1,40 @@
+$light-blue: #3fc5d6;
+$dark-blue: #001a8a;
+$blue: #4ab4da;
+$violet: #8359f2;
+$blue-mobile: #638ee5;
+$violet-mobile: #6e7cea;
+$black: #00093b;
+$pink: #ff9c98;
+$white: white;
+
+$background-color: #ffffff;
+$background-gradient: linear-gradient(90deg, $violet 0%, $blue 100%);
+$background-gradient-mobile: linear-gradient(
+  90deg,
+  $violet-mobile 0%,
+  $blue-mobile 100%
+);
+
+$link-color: #00093b;
+$title-color: black;
+$title-color-inverse: white;
+$font-color: #4a4a4a;
+$light-font-color: #bcbcbc;
+
+$section-margin: 0rem;
+$section-padding: 0rem;
+
+$header-width: 120rem;
+$header-height: 12rem;
+
+$font-size: 2.3rem;
+$blog-font-size: 2rem;
+
+$skew-page: 6deg;
+// Used for calculating the padding for diagonal background elements
+// https://9elements.com/blog/pure-css-diagonal-layouts/
+
+$magic-number: 0.05255211763; /* tan(6°)/2 */
+$content-width: 100vw; // Applied to the body in main.scss
+$skew-padding: calc($content-width * $magic-number);
