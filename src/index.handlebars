@@ -1,6 +1,11 @@
 <html lang='en'>
   {{> partials/head }}
   {{> partials/scripts }}
+  <script type='text/javascript'>
+    let captcha; var onloadCallback = function() { captcha =
+    grecaptcha.render('custom-captcha', { 'sitekey' :
+    '6LftEbEiAAAAAFB4AVeJR-9yBpZWdVndky5yXzsA' }); };
+  </script>
   <body class='about-us'>
     {{> partials/nav}}
     <header>
