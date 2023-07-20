@@ -15,6 +15,10 @@
     margin: inherit;
   }
 
+  .text-center {
+    text-align: center;
+  }
+
   &#why,
   &#why-2,
   &#why-3,
@@ -120,11 +124,11 @@
       }
 
       @media only screen and (max-width: 990px) {
-        padding: 10rem 0;
+        padding: 10rem 3rem;
       }
 
       @media only screen and (max-width: 590px) {
-        padding: 6rem 0;
+        padding: 6rem 3rem;
       }
 
       .section-padder {
@@ -249,6 +253,7 @@
 
   .stock-image {
     img {
+      width: 100%;
       max-width: 40rem;
       height: auto;
     }
@@ -262,6 +267,10 @@
     @media only screen and (max-width: 990px) {
       display: flex;
       flex-direction: column !important;
+
+      .stock-image {
+        padding-top: 3rem;
+      }
 
       .section-image {
         .image {
@@ -287,6 +296,7 @@
   .card-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .section-wrapper {
