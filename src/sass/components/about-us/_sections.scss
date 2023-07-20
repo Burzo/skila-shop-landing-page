@@ -11,9 +11,9 @@
     color: $white;
   }
 
-  h2 {
-    margin: inherit;
-  }
+  // h2 {
+  //   margin: inherit;
+  // }
 
   .text-center {
     text-align: center;
@@ -235,9 +235,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 55%;
 
     @media only screen and (max-width: 990px) {
       flex-direction: column !important;
+    }
+
+    .section-padder {
+      max-width: 40%;
     }
   }
 }
